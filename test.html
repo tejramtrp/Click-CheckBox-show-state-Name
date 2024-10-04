@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+</head>
+<body>
+	<input type="checkbox" id="checkBox" onchange="check()">
+<select id="select" onChange="myFun()"> 
+	<option value="Uttar Pradesh">Uttar Pradesh</option>
+	<option value="New Delhi">New Delhi</option>
+	<option value="Bihar">Bihar</option>
+
+</select>
+<p id="demo"></p>
+<script>
+    var state = document.getElementById("select");
+    var demo = document.getElementById("demo");
+    state.style.display = "none";
+	function check(){
+		var checkBxb = document.getElementById("checkBox");
+		if(checkBxb.checked == true){
+		    state.style.display = "inline-block";
+		    demo.style.display = "block";
+		} else if (checkBxb.checked != true)
+		{
+		    state.style.display = "none";
+		    demo.style.display = "none";
+		}
+	 } 
+	function myFun(){  
+		state.style.display = "inline-block"; 
+		demo.innerHTML = state.value;
+
+		  
+	}
+	
+</script>
+</body>
+</html>
